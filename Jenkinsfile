@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Building Project') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'MyGitHub', url: 'https://github.com/amandal7/JenkinsPipelineDocker']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'MyGitHub', url: 'https://github.com/amandal7/JenkinsPipelineDocker.git']]])
             }
         }
 		stage('Building Docker Image') {
